@@ -1,0 +1,39 @@
+app-home-card{
+    width: 100%;
+    margin: var(--margin);
+}
+
+.home-contents{
+    justify-content: center;
+}
+
+.home-desc{
+    margin: 0 5%;
+}
+
+.home-me img{
+    margin: auto;
+    border-radius: var(--round);
+    box-shadow: 0 3px 5px var(--shadow);
+    margin: var(--margin);
+}
+
+.home-me{
+    background: var(--shadow);
+    border-radius: var(--round);
+    padding: var(--padding);
+}
+
+@media screen and (min-width: 1000px){
+    app-home-card{
+        width: calc(50% - 9px);
+    }
+
+    .home-desc{
+        margin: 0 15%;
+    }
+
+    .home-me{
+        margin: 0 20%;
+    }
+}

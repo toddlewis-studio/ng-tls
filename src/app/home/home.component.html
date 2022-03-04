@@ -1,0 +1,32 @@
+<div class="card">
+    <b class="flex v-align">
+        <img width="64px" height="64px" src="https://collection.wispcrypto.com/asset/logo_stacked.PNG">
+        <b class="super-title">Todd Lewis Studios</b>
+    </b>
+    <div class="margin padding">
+        <a class="link" routerLink="/resume">Resume</a>
+    </div>
+    <div class="layer flex center t-center column">
+        <div class="home-me">
+            <img width="310px" height="480px" src="./assets/me.jpg">
+        </div>
+        <br>
+        <b>Brayan Byrdsong</b>
+        <br>
+        <p class="home-desc">"Hello, I am the creator of TLS. I've previously been a developer for companies such as Chase Bank and UPS. I hold 4 years of professional experience and around 8 years of personal experience. I got into coding at a young age and it truely has become a passion of mine."</p>
+    </div>
+    <div class="flex center">
+        <a class="button" target="_blank" href="./assets/Brayan Byrdsong Resume.pdf">Resume</a>
+    </div>
+    <div class="flex wrap home-contents">
+        <app-home-card *ngFor="let card of cards"
+            [name]="card.name"
+            [link]="card.link"
+            [tag]="card.tag"
+            [img]="card.img"
+            [pv]="card.pv"
+        >
+            <p *ngFor="let p of card.p">{{p}}</p>
+        </app-home-card>
+    </div>
+</div>

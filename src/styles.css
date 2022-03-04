@@ -1,1 +1,251 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@700&display=swap');
+
+@media screen and (min-width: 1000px){
+    body{
+        margin: 9px 10%;
+    }
+}
+
+.super-title{
+    font-size: 2.5em;
+    margin: 1em;
+    color: white;
+}
+
+/*Dark theme taken from Wisp Crypto*/
+
+*{
+    font-family: 'Courier Prime', monospace !important;
+    color: var(--text-color);
+    text-shadow: 1px 1px var(--shadow);
+}
+
+.dark .button, .input, .select{
+    color: var(--text-color);
+    border: 2px solid var(--whiten) !important;
+}
+
+.dark .button:hover, .input, .select{
+    border: 2px solid white !important;
+}
+
+.card{
+    border-radius: var(--round);
+}
+
+.header{
+    color: var(--text-color);
+}
+
+.title{
+    color: var(--text-color);
+}
+
+.dark .link:hover{
+    color: white !important;
+}
+
+.dark .nav-dropdown button{
+    min-width: 100px;
+    background-color: var(--card-bg);
+    width: auto;
+    border: 2px solid white !important;
+}
+.dark .nav-link{
+    background: #6d6571;
+}
+.dark .nav-link:hover{
+    color: white;
+}
+
+.form input{
+    padding: var(--padding);
+    margin: var(--margin);
+    border: none;
+    box-shadow: 0 3px 5px var(--shadow) inset;
+    border-radius: var(--clickable);
+    cursor: pointer;
+    background: gray;
+    color: white;
+    font-size: 1em;
+}
+
+.form input[type="submit"]{
+    box-shadow: 0 3px 5px var(--shadow);
+}
+
+.form input::placeholder{
+    color: lightgray;
+}
+
+table{
+    width: 100%;
+}
+table tr{
+    padding: var(--padding);
+    background-color: var(--layer-bg);
+    box-shadow: 0 3px 5px var(--layer);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+table td{
+    width: 100%;
+}
+@media screen and (max-width: 600px){
+    table tr{
+        flex-direction: column;
+        margin: var(--margin);
+        border-radius: var(--round);
+    }
+}
+
+.clickable{
+    box-shadow: 0 3px 5px var(--layer);
+    transition: .3s;
+}
+
+.clickable:hover{
+    box-shadow: 0 3px 5px var(--shadow);
+}
+
+.img{
+    width: 123px;
+    height: 123px;
+}
+.catalog{
+    width: 162px;
+    height: 162px;
+}
+.catalog-full{
+    width: 216px;
+    height: 216px;
+}
+.catalog-view{
+    width: 100%;
+}
+.catalog-view-overlay{
+    margin-top: 10%;
+}
+@media screen and (min-width: 800px){
+    .catalog-view{
+        width: 30%;
+        margin: 0 35%;
+        border-radius: var(--round);
+        margin-top: -10%;
+    }
+}
+
+[disabled]{
+    cursor: not-allowed !important;
+}
+
+button[disabled]{
+    opacity: .6;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 9px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--bg);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--whiten);
+    border-radius: var(--clickable);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: white;
+} 
+
+.superTag{
+    color: lightgreen;
+}
+
+.preview{
+    display: inline-block;
+    border-radius: 100%;
+    margin: var(--margin);
+    width: 64px;
+    height:64px;
+}
+.preview img{
+    border-radius: 100%;
+    width: 64px;
+    height:64px;
+}
+
+.i{
+    /* background: var(--lighten); */
+    border-radius: 100%;
+    margin: var(--margin);
+    width: 32px;
+    height: 32px;
+}
+
+/* Tooltip container */
+.tooltip {
+    position: relative;
+}
+
+/* Tooltip text */
+.tooltip .tip {
+    position: absolute;
+    z-index: 1;
+    visibility: hidden;
+    top: 60%;
+    border: 2px solid white;
+    border-radius: var(--round);
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tip{
+    visibility: visible;
+}
+
+@media screen and (max-width: 1000px) {
+    .m-center{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .m-hidden{
+        display: none;
+    }
+    .catalog{
+        width: 128px;
+        height: 128px;
+    }
+    .m-catalog{
+        width: 100%;    
+        height: 100%;
+    }
+    .preview img{
+        width: 64px;
+        height: 64px;
+    }
+    .m-col{
+        width: 100%;
+    }
+}
+
+/* Dark Theme */
+:root{
+    --bg: rgb(99, 92, 102) !important;
+}
+:root .dark *{
+    --bg: rgb(99, 92, 102) !important;
+    --text-color: white !important;
+    --card-bg: #464148 !important;
+    --layer-bg: #6d6571 !important;
+    --link: lightblue !important;
+    --link-hover: #6d6571 !important;
+    --link-bg: #635c66 !important;
+}
