@@ -7,33 +7,29 @@ app-home-card{
     justify-content: center;
 }
 
-.home-desc{
-    margin: 0 5%;
-}
-
-.home-me img{
-    margin: auto;
+.home-image img {
     border-radius: var(--round);
     box-shadow: 0 3px 5px var(--shadow);
-    margin: var(--margin);
+    margin:  0 5%;
 }
 
-.home-me{
-    background: var(--shadow);
-    border-radius: var(--round);
-    padding: var(--padding);
+.home-image p{
+    margin: 0 10%;
 }
 
 @media screen and (min-width: 1000px){
     app-home-card{
         width: calc(50% - 9px);
     }
+}
 
-    .home-desc{
-        margin: 0 15%;
+@media screen and (max-width: 1000px){
+    .home-image{
+        flex-direction: column;
     }
 
-    .home-me{
-        margin: 0 20%;
+    .home-image img{
+        margin: var(--margin) auto;
+        display: block;
     }
 }
