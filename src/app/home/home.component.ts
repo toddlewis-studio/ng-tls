@@ -12,8 +12,8 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  toCard(name: string, link: string, tag: string, img: string, pv: string, ...p: string[]){
-    return {name, link, tag, img, pv, p}
+  toCard(name: string, link: string, tag: string, img: string, preview: string, ...p: string[]){
+    return {name, link, tag, img, preview, p}
   }
 
   // Would be created in an "admin form" and loaded via API

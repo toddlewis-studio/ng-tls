@@ -12,7 +12,7 @@ import { Component, Input, OnInit } from '@angular/core';
             <i class="flex right">{{tag}}</i>
         </div>
         <div class="flex center">
-            <img class="pv" src="{{pv}}">
+            <img class="pv" src="{{preview}}">
         </div>
         <div class="margin padding">
             <ng-content></ng-content>
@@ -27,7 +27,7 @@ export class HomeCardComponent implements OnInit {
   @Input() name: string = '';
   @Input() link: string = '';
   @Input() tag: string = '';
-  @Input() pv: string = '';
+  @Input() preview: string = '';
 
   constructor() { }
 
