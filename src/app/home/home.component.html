@@ -16,14 +16,18 @@
         <div class="flex center column t-center margin padding">
             <b class="header">Brayan Byrdsong</b>
             <br>
-            <p>"Hello, I am the creator of TLS. I've previously been a developer for companies such as Chase Bank and UPS. I hold 4 years of professional experience and around 8 years of personal experience. I got into coding at a young age and it truly has become a passion of mine."</p>
+            <p>"Hello, I am the creator of TLS. I've previously been a developer for companies such as Chase Bank and UPS. I hold 7 years of professional experience. I got into coding at a young age and it truly has become a passion of mine."</p>
             <div class="flex center">
                 <a class="button" target="_blank" href="./assets/Brayan Byrdsong Resume.pdf">Resume</a>
             </div>
         </div>
     </div>
     <hr>
-    <b class="header t-center margin padding">Studio Projects</b>
+    <div class="margin padding">
+        <b class="header t-center margin padding">Studio Projects</b>
+        <p>"Over the years of my programming career, I have always been interested in creating my own frameworks. This passion was only intensified by exposure to professional frameworks such as <b>Angular</b>. I was fortunate to have worked with <b>Angular</b> since it was in beta, really driving my inspiration to build my own. With each itteration of the <b>i0 Framework</b> I was able to build projects faster with more readable code. This would allow me to take breaks and return to projects with ease, adding longevity and quality."</p>
+    </div>
+    <hr>
     <div class="flex wrap home-contents">
         <app-home-card *ngFor="let card of cards"
             [name]="card.name"
@@ -35,4 +39,23 @@
             <p *ngFor="let p of card.p">{{p}}</p>
         </app-home-card>
     </div>
+    <hr>
+    <div class="margin padding">
+        <b class="header t-center margin padding">Highschool</b>
+        <p>"My love for programming started highschool (2012-2016). I created Eye Of Power using the MIT Scratch programming engine for the Georgia Tech Scratch competition. I ended up winning the Single Person category and this gave me alot of confidence. I learned Java soon after and won the school's science fair by creating a studying tool. I also created my own game engine, Byrd Engine, which I used to create several Java demo products."</p>
+    </div>
+    <hr>
+    <div class="flex wrap home-contents">
+        <app-home-hs-card *ngFor="let card of hsCards"
+            [name]="card.name"
+            [link]="card.link"
+            [tag]="card.tag"
+            [preview]="card.preview"
+        >
+            <p *ngFor="let p of card.p">{{p}}</p>
+        </app-home-hs-card>
+    </div>
+    <!-- <div class="layer">
+        <button (click)="runTest()">API Test</button>
+    </div> -->
 </div>

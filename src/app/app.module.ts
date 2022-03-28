@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { HomeCardComponent } from './home/components/home-card.component';
 import { ResumeComponent } from './resume/resume.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HomeHsCardComponent } from './home/components/home-hs-card.component';
 
 
 @NgModule({
@@ -13,11 +15,13 @@ import { ResumeComponent } from './resume/resume.component';
     AppComponent,
     HomeComponent,
     HomeCardComponent,
-    ResumeComponent
+    ResumeComponent,
+    HomeHsCardComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

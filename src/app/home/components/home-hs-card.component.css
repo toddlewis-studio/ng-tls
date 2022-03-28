@@ -1,0 +1,13 @@
+.layer{
+    height: 100%;
+}
+
+.pv{
+    border-radius: var(--clickable);
+    max-width: 480px;
+    max-height: 270px;
+}
+
+.bigtext{
+    font-size: var(--bigtext);
+}

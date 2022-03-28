@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TestService } from '../services/test.service';
 
 @Component({
   selector: 'app-home',
@@ -7,13 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private test: TestService) {  }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
   toCard(name: string, link: string, tag: string, img: string, preview: string, ...p: string[]){
     return {name, link, tag, img, preview, p}
+  }
+
+  toHsCard(name: string, link: string, tag: string, preview: string, ...p: string[]){
+    return {name, link, tag, preview, p}
+  }
+
+  runTest(){
+    let returnObj: {msg:string};
+    this.test.runTest().subscribe(res => {
+      // returnObj = res;
+      console.log(res)
+    })
   }
 
   // Would be created in an "admin form" and loaded via API
@@ -46,7 +58,7 @@ export class HomeComponent implements OnInit {
       './assets/gamepro-pv.PNG',
       'Create games with javascript that export as a bundle of assets, html, js, and css files.',
       'Styled for IPad browser "Inspect" which allows for inspecting and other javascript developer tools.',
-      'Created with ES6+ and NodeJS.'
+      'Created with JavaScript and NodeJS.'
     ),
     this.toCard(
       'i0 Framework',
@@ -55,8 +67,63 @@ export class HomeComponent implements OnInit {
       'https://i04--blbbrayan.repl.co/www/assets/logo-ico.png',
       './assets/i0-pv.png',
       'Use i0 to quickly create websites. i0 handles frontend and backend and also has Firebase database integration.',
-      'Created with ES6+ and NodeJS.'
+      'Created with JavaScript and NodeJS.'
     )
   ]
+
+  hsCards = [
+    this.toHsCard(
+      'Unsung Forest',
+      '',//link
+      'Arcade Game',
+      '',//img
+      'Dodge enemies and fire arrows to vanquish foes. Defeat the Dragon boss!',
+      'Created in Java via Byrd Engine.',
+    ),
+    this.toHsCard(
+      'Battle Monsters',
+      '',//link
+      'Turn Based Strategy Game',
+      '',//img
+      'Select and earn monsters to battle.',
+      'Created in Java via Byrd Engine.',
+    ),
+    this.toHsCard(
+      'Byrd Notes',
+      '',//link
+      'Study Tool',
+      '',//img
+      'Create notes and flashcards. Test your knowledge with flashcard quiz mode.',
+      'Created in Java via Byrd Engine.',
+    ),
+    this.toHsCard(
+      'Pixel World',
+      '',//link
+      'Mine and Place Game',
+      '',//img
+      'Mine the blocky world around you and place blocks.',
+      'Created in Java via Byrd Engine.',
+    ),
+    this.toHsCard(
+      'Byrd Engine',
+      '',//link
+      'Java Full-Stack Framework',
+      '',//img
+      'Featured game engine UI via swing elements and input management, storing and loading data, and a server.',
+      'Created in Java.',
+    ),
+    this.toHsCard(
+      'Eye of Power',
+      '',//link
+      'Role Playing Game',
+      '',//img
+      'Play as several classes and races. Complete quests. Level up. Unlock pets and mounts.',
+      'Created in MIT Scratch.',
+    )
+  ]
+
+  ngOnDestory(){
+    
+  }
 
 }

@@ -3,6 +3,11 @@ app-home-card{
     margin: var(--margin);
 }
 
+app-home-hs-card{
+    width: 100%;
+    margin: var(--margin);
+}
+
 .home-contents{
     justify-content: center;
 }
@@ -19,6 +24,9 @@ app-home-card{
 
 @media screen and (min-width: 1000px){
     app-home-card{
+        width: calc(50% - 9px);
+    }
+    app-home-hs-card{
         width: calc(50% - 9px);
     }
 }
